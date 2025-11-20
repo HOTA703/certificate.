@@ -10,82 +10,151 @@
     font-family: Arial, sans-serif;
     background-color: #0b2c48;
     color: white;
+    display: flex;
+    height: 100vh;
   }
-  .container {
+
+  .left {
+    background-color: #ffffff;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin: 20px 0;
   }
+
   .certificate-box {
-    background-color: white;
+    width: 80%;
+    background-color: #fff;
     color: black;
     border-radius: 10px;
-    width: 350px;
     padding: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align: center;
   }
+
   .certificate-box img {
-    display: block;
-    margin: 0 auto 15px;
-    width: 100px;
+    width: 120px;
+    margin-bottom: 10px;
   }
+
   .certificate-box table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 10px;
   }
+
   .certificate-box td {
-    padding: 6px 0;
+    padding: 6px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
   }
+
+  .certificate-box td:first-child {
+    color: #0073aa;
+    font-weight: bold;
+    width: 45%;
+  }
+
   .footer {
     background-color: #00a86b;
     color: white;
-    text-align: center;
-    padding: 10px;
-    border-radius: 0 0 10px 10px;
+    padding: 15px;
+    border-radius: 10px;
     margin-top: 15px;
-  }
-  .title {
     text-align: left;
-    margin-bottom: 20px;
   }
-  .title h1 {
-    font-size: 28px;
+
+  .footer h4 {
+    margin: 0 0 5px 0;
+  }
+
+  .footer ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
   }
-  .title p {
+
+  .footer ul li {
+    margin: 3px 0;
+  }
+
+  .footer ul li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .right {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .right h1 {
+    font-size: 42px;
+    margin: 10px 0;
+  }
+
+  .right p {
+    font-size: 16px;
+    color: #cfd8dc;
+  }
+
+  .bottom-text {
+    margin-top: auto;
     font-size: 14px;
-    margin: 0;
+    color: #cfd8dc;
   }
 </style>
 </head>
 <body>
 
-<div class="container">
+<div class="left">
   <div class="certificate-box">
-    <div class="title">
-      <p><strong>Certificate Presentation</strong></p>
-      <h1>Certificate of Completion</h1>
-      <p>Presented to the Achiever</p>
-    </div>
-
-    <img src="https://raw.githubusercontent.com/HOTA703/certificate/main/logo.png" alt="Certificate Logo">
+    <p><strong>Abdelmahmoud is StudySection Certified in Python</strong></p>
+    <img src="https://raw.githubusercontent.com/HOTA703/certificate/main/stamp.png" alt="Certificate Stamp">
 
     <table>
-      <tr><td><strong>Student Name:</strong></td><td>Mahmoud</td></tr>
-      <tr><td><strong>Test ID:</strong></td><td>543999</td></tr>
-      <tr><td><strong>Test Name:</strong></td><td>Python (Foundation)</td></tr>
-      <tr><td><strong>Test Date:</strong></td><td>June 3, 2025</td></tr>
-      <tr><td><strong>Result Status:</strong></td><td>Pass</td></tr>
-      <tr><td><strong>Skill Level:</strong></td><td>Intermediate</td></tr>
+      <tr><td>Student Name:</td><td>Mahmoud</td></tr>
+      <tr><td>Test ID:</td><td>543999</td></tr>
+      <tr><td>Test Name:</td><td>Python (Foundation)</td></tr>
+      <tr><td>Test Date:</td><td>June 3, 2025</td></tr>
+      <tr><td>Global Rank:</td><td>13462</td></tr>
+      <tr><td>Result Status:</td><td>Pass</td></tr>
+      <tr><td>Skill Level:</td><td>Intermediate</td></tr>
     </table>
 
     <div class="footer">
-      © 2025 Your Organization | All Rights Reserved
+      <h4>COMPANY</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+
+      <h4>USEFUL LINKS</h4>
+      <ul>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Certifications</a></li>
+        <li><a href="#">Help Center</a></li>
+      </ul>
     </div>
   </div>
 </div>
 
-</body>
+<div class="right">
+  <p><strong>Certificate Presentation</strong></p>
+  <h1>Certificate of Completion</h1>
+  <p class="bottom-text">Presented to the Achiever</p>
+</div>
 
+</body>
 </html>
